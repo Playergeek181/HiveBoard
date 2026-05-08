@@ -1,6 +1,8 @@
 # HiveBoard – Modular Dexterity Benchmark for Industrial Robotics
 
-![HiveBoard Overview](Images/logo.png)
+<p align="center">
+    <img src="Images/logo.png" width="75%">
+</p>
 
 ## Overview
 
@@ -28,7 +30,10 @@ All components in this repository are printable in **PLA filament**.
 
 # Project Architecture
 
-![HiveBoard Base](Images/hive_empty.jpg)
+<p align="center">
+    <img src="Images/hive_empty.jpg" width="60%">
+</p>
+
 
 The HiveBoard base contains seven hexagonal cells arranged in a honeycomb pattern. Each attachment uses a standardized press-fit mounting geometry, allowing rapid reconfiguration without screws or fasteners.
 
@@ -45,7 +50,9 @@ This modular architecture enables:
 
 ## 1. Torque-Based Tasks
 
-![Torque Attachments](Images/power-based.JPG)
+<p align="center">
+    <img src="Images/power-based.JPG" width="60%">
+</p>
 
 These tasks evaluate force control and rotational manipulation capabilities.
 
@@ -65,7 +72,9 @@ The friction ring system allows multiple torque levels without printing addition
 
 ## 2. Precision-Based Tasks
 
-![Precision Attachments](Images/precision-based.JPG)
+<p align="center">
+    <img src="Images/precision-based.JPG" width="60%">
+</p>
 
 These tasks focus on alignment, insertion, and fine manipulation.
 
@@ -84,7 +93,9 @@ These attachments challenge grasp precision and fine force control.
 
 ## 3. Composed Assembly Tasks
 
-![Assembly Attachments](Images/assemby-based.JPG)
+<p align="center">
+    <img src="Images/assemby-based.JPG" width="60%">
+</p>
 
 These tasks involve multiple sequential manipulation stages.
 
