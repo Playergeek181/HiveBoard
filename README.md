@@ -1,7 +1,7 @@
 # HiveBoard – Modular Dexterity Benchmark for Industrial Robotics
 
 <p align="center">
-    <img src="Images/logo.png" width="75%">
+    <img src="Images/logo_light.png" width="75%">
 </p>
 
 ## Overview
