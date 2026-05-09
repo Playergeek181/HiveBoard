@@ -1,4 +1,4 @@
-# HiveBoard – Modular Dexterity Benchmark for Industrial Robotics
+# HiveBoard – a Modular Dexterity Benchmark for Industrial Robotics
 
 <p align="center">
     <img src="Images/logo_light.png" width="75%">
@@ -8,7 +8,7 @@
 
 HiveBoard is an open, modular, and fully 3D-printable dexterity benchmark designed for evaluating industrial robotic manipulation systems. The project focuses on reproducibility, accessibility, and compatibility with both real-world robotic systems and simulation environments.
 
-The platform was designed around three core principles:
+The platform is designed around three principles:
 
 - **Low-cost reproducibility** using consumer-grade FDM 3D printers
 - **Modular task expansion** through interchangeable attachments
@@ -28,7 +28,7 @@ All components in this repository are printable in **PLA filament**.
 
 ---
 
-# Project Architecture
+## Project Architecture
 
 <p align="center">
     <img src="Images/hive_empty.jpg" width="60%">
@@ -46,9 +46,9 @@ This modular architecture enables:
 
 ---
 
-# Attachment Categories
+## Attachment Categories
 
-## 1. Torque-Based Tasks
+### 1. Torque-Based Tasks
 
 <p align="center">
     <img src="Images/power-based.JPG" width="60%">
@@ -60,17 +60,17 @@ Included components:
 
 | Attachment | Description |
 |---|---|
-| Ball Valve | Rotational valve with configurable friction |
-| Friction Rings | Snap-on rings that increase torque resistance |
-| Gate Valve (Small) | Compact valve with lower torque |
-| Gate Valve (Large) | Larger high-torque valve |
+| Ball Valve | Quarter-turn valve with a lever handle |
+| Friction Rings | Snap-on rings (set of four) that increase rotational friction, and therefore torque resistance, on the ball valve |
+| Gate Valve (Small) | Compact gate valve with a smaller handwheel |
+| Gate Valve (Large) | Larger gate valve with a higher-leverage handwheel |
 | Circuit Breaker | Toggle-style industrial breaker |
 
-The friction ring system allows multiple torque levels without printing additional valves.
+The friction-ring system gives multiple torque levels on the ball valve without printing additional valves. Each ring sets a different rotational friction.
 
 ---
 
-## 2. Precision-Based Tasks
+### 2. Precision-Based Tasks
 
 <p align="center">
     <img src="Images/precision-based.JPG" width="60%">
@@ -82,16 +82,16 @@ Included components:
 
 | Attachment | Description |
 |---|---|
-| Light Bulb Socket | Fine rotational alignment |
+| Light Bulb Socket | Threaded bulb-and-socket assembly |
 | Thread M8 | Small threaded fastener |
 | Thread M30 | Large threaded fastener |
 | Peg Insertion Plate | Tight-clearance peg alignment |
 
-These attachments challenge grasp precision and fine force control.
+These attachments challenge grasp precision and fine alignment.
 
 ---
 
-## 3. Composed Assembly Tasks
+### 3. Composed Assembly Tasks
 
 <p align="center">
     <img src="Images/assemby-based.JPG" width="60%">
@@ -103,24 +103,24 @@ Included components:
 
 | Attachment | Description |
 |---|---|
-| Hidden Push Button | Hinged cover + button press |
+| Hidden Push Button | Hinged cover plus button press |
 | Lock and Key | Insertion and rotational unlocking |
 | Sliding Drawer | Linear motion manipulation |
-| Shock Absorber | Multi-part assembly spanning two cells |
+| Shock Absorber | Multi-part assembly that occupies two adjacent cells |
 
-The composed tasks allow evaluation of multi-stage manipulation behavior.
+The composed tasks allow evaluation of multi-stage manipulation behavior under stage-wise scoring.
 
 ---
 
-# Included STL Components
+## Included STL Components
 
 | Category | Part |
 |---|---|
 | Base System | Hexagonal Honeycomb Base |
 | Torque Tasks | Ball Valve |
 | Torque Tasks | Friction Rings |
-| Torque Tasks | Gate Valve Small |
-| Torque Tasks | Gate Valve Large |
+| Torque Tasks | Gate Valve, Small |
+| Torque Tasks | Gate Valve, Large |
 | Torque Tasks | Circuit Breaker |
 | Precision Tasks | Light Bulb Socket |
 | Precision Tasks | Thread M8 |
@@ -133,9 +133,9 @@ The composed tasks allow evaluation of multi-stage manipulation behavior.
 
 ---
 
-# Recommended 3D Printing Settings
+## Recommended 3D Printing Settings
 
-## Standard PLA Profile
+### Standard PLA Profile
 
 | Setting | Value |
 |---|---|
@@ -155,7 +155,7 @@ The composed tasks allow evaluation of multi-stage manipulation behavior.
 
 ---
 
-# Recommended Infill Per Part Type
+### Recommended Infill Per Part Type
 
 | Part Type | Recommended Infill |
 |---|---|
@@ -167,7 +167,7 @@ The composed tasks allow evaluation of multi-stage manipulation behavior.
 
 ---
 
-# Suggested Print Orientation
+### Suggested Print Orientation
 
 | Component Type | Orientation |
 |---|---|
@@ -180,7 +180,7 @@ The composed tasks allow evaluation of multi-stage manipulation behavior.
 
 ---
 
-# Simulation Compatibility
+## Simulation Compatibility
 
 ![Simulation Assets](images/simulation_assets.png)
 
@@ -203,64 +203,70 @@ This enables direct sim-to-real robotics experimentation.
 
 ---
 
-# Research Applications
+## Evaluation Protocol
 
-HiveBoard can be used for:
+A reproducible operator-driven protocol is provided for benchmarking grippers, hands, and policies on HiveBoard:
 
-- Robotic manipulation benchmarking
-- Gripper evaluation
-- Teleoperation experiments
-- Reinforcement learning
-- Vision-language-action model evaluation
-- Sim-to-real transfer research
-- Industrial robotics training datasets
+- [`PROTOCOL.md`](Documentation/PROTOCOL.md): the full protocol, including success criteria, per-attachment timeouts, and stage definitions for the composed assembly tasks.
+- [`HOW_TO_FILL_TRIALS.md`](Documentation/HOW_TO_FILL_TRIALS.md): column-by-column instructions for the trial logging template.
+- [`trials.csv`](Documentation/trials.csv) and [`trials.xlsx`](Documentation/trials.xlsx): pre-populated logging template with one row per trial (5 trials per attachment, 65 rows total). Use the xlsx for filling in (frozen header, dropdowns, color-coded categories); the CSV is provided for scripts.
+
+The protocol prescribes 5 recorded trials per attachment per platform. Operators may control the manipulation system through a teleoperated arm or through a wearable interface or exoskeleton driving a gripper or hand directly. For each trial we record the outcome, completion time, attempts, regrasps, and, for the composed assembly tasks, the highest stage reached within the timeout.
 
 ---
 
-# Repository Structure
+## Research Applications
 
-```text
-/
-├── STL/
-├── CAD/
-├── Simulation/
-├── Documentation/
-├── Images/
-└── README.md
+HiveBoard supports:
+
+- Robotic manipulation benchmarking.
+- Gripper and dexterous-hand evaluation.
+- Teleoperation experiments.
+- Wearable-interface and exoskeleton evaluation.
+- Reinforcement learning.
+- Vision-language-action model evaluation.
+- Sim-to-real transfer research.
+- Industrial robotics training datasets.
+
+---
+
+## Repository Structure
+
+    /
+    ├── STL/             # printable parts
+    ├── CAD/             # source CAD files
+    ├── Simulation/      # URDF and USD with articulated joints
+    ├── Documentation/   # PROTOCOL.md, HOW_TO_FILL_TRIALS.md, trials.csv, trials.xlsx
+    ├── Images/          # photographs and renders
+    └── README.md
+
+---
+
+## Notes
+
+- All parts are designed for consumer-grade FDM printers.
+- PLA is the recommended material for reproducibility.
+- Minor sanding can improve threaded part performance.
+- Press-fit tolerances depend on printer calibration; print one cell of the base and one attachment first to verify the fit before committing to a full set.
+- Functional parts benefit from slower print speeds.
+
+---
+
+## Citation
+
+If you use HiveBoard in research or publications, please cite the project paper:
+
+```
+@inproceedings{hiveboard2026,
+  title  = {HiveBoard: An Open, Modular, 3D-Printed Dexterity Benchmark for Industrial Robotic Manipulation},
+  author = {<authors>},
+  booktitle = {<journal>},
+  year   = {2026}
+}
 ```
 
 ---
 
-# Example HiveBoard Layout
-
-![Example Layout](images/example_layout.png)
-
-Example configurations may combine:
-
-- Torque tasks on outer cells
-- Precision tasks in the center
-- Multi-cell assembly tasks spanning adjacent cells
-
-This allows the creation of custom benchmark scenarios.
-
----
-
-# Notes
-
-- All parts are designed for consumer-grade FDM printers
-- PLA is the recommended material for reproducibility
-- Minor sanding may improve threaded part performance
-- Press-fit tolerances may vary depending on printer calibration
-- Functional parts benefit from slower print speeds
-
----
-
-# Citation
-
-If you use HiveBoard in research or publications, please cite the original project paper.
-
----
-
-# License
+## License
 
 This project is intended for research, educational, and prototyping purposes.
