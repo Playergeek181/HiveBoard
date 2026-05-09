@@ -21,7 +21,7 @@ The system consists of a **hexagonal honeycomb base** that accepts interchangeab
 - Threaded fasteners
 - Peg insertion
 - Drawer manipulation
-- Lock-and-key systems
+- Lock-and-key
 - Shock absorber assemblies
 
 All components in this repository are printable in **PLA filament**.
