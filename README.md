@@ -31,7 +31,7 @@ All components in this repository are printable in **PLA filament**.
 ## Project Architecture
 
 <p align="center">
-    <img src="Images/hive_empty.jpg" width="60%">
+    <img src="Images/hive_empty.jpg" width="50%">
 </p>
 
 
@@ -51,7 +51,7 @@ This modular architecture enables:
 ### 1. Torque-Based Tasks
 
 <p align="center">
-    <img src="Images/power-based.JPG" width="60%">
+    <img src="Images/power-based.JPG" width="50%">
 </p>
 
 These tasks evaluate force control and rotational manipulation capabilities.
@@ -73,7 +73,7 @@ The friction-ring system gives multiple torque levels on the ball valve without 
 ### 2. Precision-Based Tasks
 
 <p align="center">
-    <img src="Images/precision-based.JPG" width="60%">
+    <img src="Images/precision-based.JPG" width="50%">
 </p>
 
 These tasks focus on alignment, insertion, and fine manipulation.
@@ -94,7 +94,7 @@ These attachments challenge grasp precision and fine alignment.
 ### 3. Composed Assembly Tasks
 
 <p align="center">
-    <img src="Images/assemby-based.JPG" width="60%">
+    <img src="Images/assemby-based.JPG" width="50%">
 </p>
 
 These tasks involve multiple sequential manipulation stages.
