@@ -1,7 +1,11 @@
 # HiveBoard – a Modular Dexterity Benchmark for Industrial Robotics
 
 <p align="center">
-    <img src="Images/logo_light.png" width="50%">
+    <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="Images/HIVEBOARD_logo_dark.png" width="50%">
+  <source media="(prefers-color-scheme: light)" srcset="Images/HIVEBOARD_logo_light.png" width="50%">
+  <img alt="Project Logo" src="Images/HIVEBOARD_logo_light.png" width="50%">
+    </picture>
 </p>
 
 ## Overview
