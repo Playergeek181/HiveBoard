@@ -4,7 +4,9 @@ This document specifies the data each collaborating laboratory collects to valid
 
 The objective is to demonstrate that the board is functional, reproducible, and discriminative across attachments and platforms. The protocol does not rank platforms against each other and does not characterize control interfaces or operators.
 
-For STL files, CAD assets, and the canonical print profile, see the project repository at https://github.com/Playergeek181/HiveBoard.
+**Project resources:**
+- Repository (STL, CAD, simulation assets, this protocol, trial logging template): https://github.com/ricardovgodoy/HiveBoard
+- Demonstration video (board walk-through and example trials): https://youtu.be/kaYB_Oc64nA
 
 ---
 
