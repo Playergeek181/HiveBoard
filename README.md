@@ -8,6 +8,8 @@
     </picture>
 </p>
 
+Demonstration video: https://youtu.be/kaYB_Oc64nA
+
 ## Overview
 
 HiveBoard is an open, modular, and fully 3D-printable dexterity benchmark designed for evaluating industrial robotic manipulation systems. The project focuses on reproducibility, accessibility, and compatibility with both real-world robotic systems and simulation environments.
